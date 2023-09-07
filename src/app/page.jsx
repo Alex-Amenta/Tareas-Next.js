@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const loadTasks = async () => await prisma.task.findMany();
 
+export const dynamic = "force-dynamic";
+
 const HomePage = async () => {
   const tasks = await loadTasks();
 
