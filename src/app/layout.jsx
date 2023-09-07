@@ -19,10 +19,6 @@ export default function RootLayout({ children }) {
           href="https://cdn2.iconfinder.com/data/icons/team-and-office/160/Task-64.png"
           type="image/x-icon"
         />
-        <script
-          src="https://kit.fontawesome.com/7266139b16.js"
-          crossOrigin="anonymous"
-        ></script>
       </head>
       <body className={rubik.className}>
         <Navbar />
