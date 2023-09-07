@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         />
         <script
           src="https://kit.fontawesome.com/7266139b16.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </head>
       <body className={rubik.className}>
