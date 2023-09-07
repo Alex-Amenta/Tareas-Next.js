@@ -8,8 +8,8 @@ const HomePage = async () => {
 
   return (
     <section className="container mx-auto mt-10">
-      <h1 className="text-center text-4xl my-5">Lista de tareas📌</h1>
-      <div className="grid grid-cols-3 gap-3">
+      <h1 id="Titulo" className="text-center text-4xl my-5 flex justify-center items-center">LISTA DE TAREAS<i class="fa-solid fa-pencil ml-4 text-red-800"></i></h1>
+      <div className="grid grid-cols-3 gap-7" id="CardsContainer">
         {tasks.map((task) => (
           <TaskCard key={task.id} task={task} />
         ))}

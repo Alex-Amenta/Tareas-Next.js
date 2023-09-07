@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Tareas - NextCrud",
@@ -13,9 +13,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/team-and-office/160/Task-64.png" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="shortcut icon"
+          href="https://cdn2.iconfinder.com/data/icons/team-and-office/160/Task-64.png"
+          type="image/x-icon"
+        />
+        <script
+          src="https://kit.fontawesome.com/7266139b16.js"
+          crossorigin="anonymous"
+        ></script>
       </head>
-      <body className={inter.className}>
+      <body className={rubik.className}>
         <Navbar />
         {children}
       </body>

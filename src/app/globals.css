@@ -3,5 +3,120 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-950 text-white
+  @apply bg-gray-950 text-white;
+}
+
+#CardsContainer {
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+#Titulo {
+  margin-top: 8rem;
+}
+
+.card {
+  background-color: #011522;
+  border-radius: 8px;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.card-about {
+  margin: auto;
+  padding: 1.5rem;
+  margin-top: 10rem;
+  color: aliceblue;
+  width: 20rem;
+  height: 29rem;
+  border-radius: 5px;
+  border: 1px solid #6c1c1c;
+  transition: all 0.2s;
+  box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.2);
+}
+
+.card-about:hover {
+  box-shadow: -12px 12px 2px -1px rgba(255, 0, 0, 0.2);
+}
+
+.card-about i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 565px) {
+  #CardsContainer {
+    display: grid;
+    max-width: 80%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  #Titulo {
+    font-size: 1.8rem;
+  }
+
+  #Formulario {
+    font-size: 0.8rem;
+  }
+
+  #Formulario div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #CardsContainer button {
+    padding: 0.7rem 1rem;
+  }
+
+  .card-about {
+    font-size: 0.8rem;
+    height: 25rem;
+  }
+}
+
+@media screen and (min-width: 565px) and (max-width: 768px) {
+  /* Estilos para pantallas pequeñas */
+  #CardsContainer {
+    display: grid;
+    max-width: 80%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100%;
+  }
+
+  #Titulo {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para pantallas medianas */
 }

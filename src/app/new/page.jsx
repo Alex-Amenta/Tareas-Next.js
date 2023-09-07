@@ -7,6 +7,7 @@ const NewPage = ({ params }) => {
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
     if (params.id) {
@@ -15,6 +16,7 @@ const NewPage = ({ params }) => {
         .then((data) => {
           setTitle(data.title);
           setDescription(data.description);
+          setIsEditing(true);
         });
     }
   }, []);
@@ -61,7 +63,7 @@ const NewPage = ({ params }) => {
 
   return (
     <div className="h-screen flex justify-center items-center mt-0">
-      <form onSubmit={handleSubmit} className="bg-slate-800 p-10 w-3/4">
+      <form onSubmit={handleSubmit} className="bg-slate-800 p-10 w-3/4" id="Formulario">
         <label htmlFor="title" className="font-bold text-sm">
           Título de la tarea
         </label>
@@ -89,9 +91,9 @@ const NewPage = ({ params }) => {
         <div className="flex justify-between">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded`}
           >
-            Crear
+            {isEditing ? "Actualizar" : "Crear"}
           </button>
 
           {params.id && (
